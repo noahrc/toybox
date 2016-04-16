@@ -1,0 +1,24 @@
+{
+  "name": "toybox",
+  "version": "0.0.1",
+  "description": "A tool for managing component libraries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/noahrc/toybox.git"
+  },
+  "keywords": [
+    "components",
+    "library",
+    "webpack"
+  ],
+  "author": "Noah Robison-Cox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noahrc/toybox/issues"
+  },
+  "homepage": "https://github.com/noahrc/toybox#readme"
+}
