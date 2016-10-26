@@ -1,0 +1,25 @@
+{
+  "name": "toybox-js-xtype",
+  "version": "1.0.0",
+  "description": "A custom extension of the xtype library",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require reify spec"
+  },
+  "keywords": [
+    "toybox",
+    "xtype"
+  ],
+  "author": "nrobisoncox <nrobisoncox@ondeck.com>",
+  "license": "X11",
+  "dependencies": {
+    "xtypejs": "^0.6.1",
+    "xtypejs-extension-custom-types": "^0.1.0",
+    "xtypejs-name-scheme-shortened": "^0.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "reify": "^0.3.8"
+  }
+}
