@@ -1,0 +1,14 @@
+////////////////////////////////////////////////////////////////////////
+// BASEUNIT
+////////////////////////////////////////////////////////////////////////
+
+// A Sass variable and function for setting and using base units.
+// Intended for line-height, margins and padding.
+// Helps to establish a vertical grid.
+
+// The default baseunit is equivalent to 10px
+$baseunit: .625rem !default;
+
+@function baseunit($units: 1) {
+  @return $units * $baseunit;
+}
