@@ -4,8 +4,8 @@
   "description": "A component library system",
   "main": "index.js",
   "scripts": {
-    "commit": "git cz -- --no-verify",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "npm test && git cz -- --no-verify",
+    "test": "mocha --require reify packages/**/spec"
   },
   "repository": {
     "type": "git",
@@ -23,14 +23,19 @@
   },
   "homepage": "https://github.com/noahrc/toybox#readme",
   "devDependencies": {
+    "chai": "^3.5.0",
     "commitizen": "^2.8.6",
     "cz-lerna-changelog": "^0.3.0",
     "lerna": "^2.0.0-beta.26",
-    "lerna-semantic-release": "^8.0.2"
+    "lerna-semantic-release": "^8.0.2",
+    "mocha": "^3.1.2"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-lerna-changelog"
     }
+  },
+  "dependencies": {
+    "reify": "^0.3.8"
   }
 }
