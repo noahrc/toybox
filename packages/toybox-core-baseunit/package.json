@@ -1,6 +1,6 @@
 {
   "name": "toybox-core-baseunit",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A Sass component for creating consistent spacing",
   "main": "baseunit.scss",
   "scripts": {
