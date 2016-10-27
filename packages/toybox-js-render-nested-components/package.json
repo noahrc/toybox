@@ -1,6 +1,6 @@
 {
   "name": "toybox-js-render-nested-components",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Renders nested toybox block components.",
   "main": "build/index.js",
   "scripts": {
