@@ -17,6 +17,7 @@
   "dependencies": {
     "jsonpath": "^0.2.7",
     "reify": "^0.3.8",
+    "toybox-js-render-nested-components": "0.0.0",
     "toybox-js-xtype": "^2.0.0"
   },
   "devDependencies": {
