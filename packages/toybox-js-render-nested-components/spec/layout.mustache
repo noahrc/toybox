@@ -1,0 +1,10 @@
+<div id="{{layout__id}}" class="{{#layout__wrapperClasses}}{{.}} {{/layout__wrapperClasses}}">
+  <div class="layout {{#layout__modifiers}}layout--{{.}} {{/layout__modifiers}}">
+    {{#layout__heading}}<h2 class="layout__heading">{{layout__heading}}</h2>{{/layout__heading}}
+    {{#layout__cols}}
+      <div class="layout__col {{#layout__colModifiers}}layout__col--{{.}} {{/layout__colModifiers}}">
+        {{{layout__colContent}}}
+      </div>
+    {{/layout__cols}}
+  </div>
+</div>

@@ -1,0 +1,30 @@
+{
+  "name": "toybox-js-render-nested-components",
+  "version": "0.0.0",
+  "description": "Renders nested toybox block components.",
+  "main": "build/index.js",
+  "scripts": {
+    "docs": "jsdoc2md --template README.hbs --files index.js > README.md; echo",
+    "build": "buble index.js --no modules > build/index.js",
+    "test": "npm run build && mocha --require reify spec"
+  },
+  "keywords": [
+    "toybox",
+    "render",
+    "component"
+  ],
+  "author": "nrobisoncox <nrobisoncox@ondeck.com>",
+  "license": "X11",
+  "dependencies": {
+    "jsonpath": "^0.2.7",
+    "reify": "^0.3.8",
+    "toybox-js-xtype": "^2.0.0"
+  },
+  "devDependencies": {
+    "buble": "^0.14.0",
+    "chai": "^3.5.0",
+    "jsdoc-to-markdown": "^2.0.1",
+    "mocha": "^3.1.2",
+    "reify": "^0.3.8"
+  }
+}

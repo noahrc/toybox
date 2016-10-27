@@ -1,0 +1,11 @@
+
+<div class="thumbnail {{#thumbnail__modifiers}}thumbnail--{{.}} {{/thumbnail__modifiers}} {{#thumbnail__classes}} {{.}} {{/thumbnail__classes}}">
+    {{{thumbnail__img}}}
+  <div class="thumbnail__caption {{#thumbnail__captionClasses}} {{.}} {{/thumbnail__captionClasses}}">
+    {{! the HTML comment below allows classes and modifiers to occur within optional sections}}
+    {{^thumbnail__title}}<!--{{/thumbnail__title}}
+    <h4 class="thumbnail__captionHeading {{#thumbnail__captionHeadingClasses}} {{{.}}}{{/thumbnail__captionHeadingClasses}} {{#thumbnail__captionHeadingModifiers}} thumbnail__captionHeading--{{{.}}}{{/thumbnail__captionHeadingModifiers}}">{{{thumbnail__title}}}</h4>
+    {{^thumbnail__title}}-->{{/thumbnail__title}}
+    {{{thumbnail__content}}}
+  </div>
+</div>
