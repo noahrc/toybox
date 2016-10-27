@@ -9,12 +9,12 @@ import jp from 'jsonpath/jsonpath';
  * Renders a single component
  *
  * @export
- * @param {object, array} data Structured data to render into a component
- * @param {object, function} templates A template function or hash of template functions
+ * @param {Object|Array} data Structured data to render into a component
+ * @param {Object|Function} templates A template function or hash of template functions
  * used to render components
- * @param {object} defaults An object with default values for the component
- * @param {string} [contextPath='$'] A JSONPath string for the location of the current context
- * @returns {string} A string with the rendered component
+ * @param {Object} defaults An object with default values for the component
+ * @param {String} [contextPath='$'] A JSONPath string for the location of the current context
+ * @returns {String} A string with the rendered component
  */
 export default function renderComponent(data, templates, defaults, contextPath) {
   if ( contextPath === void 0 ) contextPath = '$';
