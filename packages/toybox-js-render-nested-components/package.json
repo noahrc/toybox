@@ -1,6 +1,6 @@
 {
   "name": "toybox-js-render-nested-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Renders nested toybox block components.",
   "main": "build.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "dependencies": {
     "jsonpath": "^0.2.7",
     "reify": "^0.3.8",
-    "toybox-js-render-component": "0.0.2",
+    "toybox-js-render-component": "0.0.4",
     "toybox-js-xtype": "^2.0.0"
   },
   "devDependencies": {
