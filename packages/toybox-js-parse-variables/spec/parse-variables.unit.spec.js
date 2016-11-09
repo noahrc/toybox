@@ -1,7 +1,7 @@
 /* global describe, it, before, expect, context */
 
 import { expect } from 'chai';
-import parseVariables from '../build/index.js';
+import parseVariables from '../build.js';
 
 describe('parse variables', () => {
   it('should parse a string with a variable and return a function', (done) => {
