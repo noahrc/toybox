@@ -19,6 +19,7 @@ import jp from 'jsonpath/jsonpath';
 export default function renderComponent(data, templates, defaults, contextPath) {
   if ( contextPath === void 0 ) contextPath = '$';
 
+  // Return data if it is not an object or array
   if (!xtype.is(data, 'obj, arr') || !templates) { return data; }
 
   var _data = data;
@@ -34,6 +35,7 @@ export default function renderComponent(data, templates, defaults, contextPath) 
       jp.apply(_data, contextPath, function () { return _contextData; });
     }
   }
+  
   // Parse the variables in _data and interpolate them using the current contextPath
   _contextData = parseVariables(_data, templates, defaults, contextPath);
 

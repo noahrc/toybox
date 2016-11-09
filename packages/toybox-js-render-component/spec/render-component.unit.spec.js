@@ -7,8 +7,7 @@ import Mustache from 'mustache';
 import rfile from 'rfile';
 
 // Import local templates for testing
-// The mustache loader turns the mustache templates into functions
-const pTemplate = Mustache.parse(rfile('./p.mustache'));
+const pTemplateFunction = (data) => Mustache.render(rfile('./p.mustache'), data);
 
 describe('Render component', () => {
 
@@ -19,7 +18,7 @@ describe('Render component', () => {
       p__content: 'Test paragraph.',
     };
     const expectedResult = '<p class="p p--test  "  >Test paragraph.</p>\n';
-    const result = renderComponent(testData, pTemplate);
+    const result = renderComponent(testData, pTemplateFunction);
     expect(result).to.equal(expectedResult);
     done();
   });
@@ -34,7 +33,7 @@ describe('Render component', () => {
       p__classes: ['defaultClass'],
     };
     const expectedResult = '<p class="p  defaultClass testClass "  >Test paragraph.</p>\n';
-    const result = renderComponent(testData, pTemplate, defaultData);
+    const result = renderComponent(testData, pTemplateFunction, defaultData);
     expect(result).to.equal(expectedResult);
     done();
   });

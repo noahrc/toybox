@@ -17,6 +17,7 @@ import jp from 'jsonpath/jsonpath';
  * @returns {String} A string with the rendered component
  */
 export default function renderComponent(data, templates, defaults, contextPath = '$') {
+  // Return data if it is not an object or array
   if (!xtype.is(data, 'obj, arr') || !templates) return data;
 
   let _data = data;
@@ -32,6 +33,7 @@ export default function renderComponent(data, templates, defaults, contextPath =
       jp.apply(_data, contextPath, () => _contextData);
     }
   }
+  
   // Parse the variables in _data and interpolate them using the current contextPath
   _contextData = parseVariables(_data, templates, defaults, contextPath);
 

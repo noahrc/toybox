@@ -6,20 +6,19 @@ import renderNestedComponents from './../build.js';
 import Mustache from 'mustache';
 import rfile from 'rfile';
 
-// Import local templates for testing
-// The mustache loader turns the mustache templates into functions
-const layoutTemplate = Mustache.parse(rfile('./layout.mustache'));
-const pTemplate = Mustache.parse(rfile('./p.mustache'));
-const aTemplate = Mustache.parse(rfile('./a.mustache'));
-const thumbnailTemplate = Mustache.parse(rfile('./thumbnail.mustache'));
-const imgTemplate = Mustache.parse(rfile('./img.mustache'));
+// Generate template functions from local template files
+const layoutTemplateFunction = (data) => Mustache.render(rfile('./layout.mustache'), data);
+const pTemplateFunction = (data) => Mustache.render(rfile('./p.mustache'), data);
+const aTemplateFunction = (data) => Mustache.render(rfile('./a.mustache'), data);
+const thumbnailTemplateFunction = (data) => Mustache.render(rfile('./thumbnail.mustache'), data);
+const imgTemplateFunction = (data) => Mustache.render(rfile('./img.mustache'), data);
 
 const templates = {
-  'p/p': pTemplate,
-  'a/a': aTemplate,
-  'img/img': imgTemplate,
-  'layout/layout': layoutTemplate,
-  'thumbnail/thumbnail': thumbnailTemplate,
+  'p/p': pTemplateFunction,
+  'a/a': aTemplateFunction,
+  'img/img': imgTemplateFunction,
+  'layout/layout': layoutTemplateFunction,
+  'thumbnail/thumbnail': thumbnailTemplateFunction,
 };
 
 describe('Render nested components', () => {
