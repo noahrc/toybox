@@ -2,11 +2,13 @@
 /* prefer-arrow-callback: ["error", { "allowNamedFunctions": true }] */
 
 import { expect } from 'chai';
-import renderComponent from './../build/index.js';
+import renderComponent from './../build.js';
+import Mustache from 'mustache';
+import rfile from 'rfile';
 
 // Import local templates for testing
 // The mustache loader turns the mustache templates into functions
-import pTemplate from '!mustache!./p.mustache';
+const pTemplate = Mustache.parse(rfile('./p.mustache'));
 
 describe('Render component', () => {
 

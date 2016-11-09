@@ -2,10 +2,10 @@
   "name": "toybox-js-render-component",
   "version": "0.0.2",
   "description": "Renders a toybox block component.",
-  "main": "build/index.js",
+  "main": "build.js",
   "scripts": {
     "docs": "jsdoc2md --template README.hbs --files index.js > README.md; echo",
-    "build": "buble index.js --no modules > build/index.js",
+    "build": "buble index.js --no modules > build.js",
     "test": "npm run build && mocha --require reify spec"
   },
   "keywords": [
@@ -20,8 +20,8 @@
     "deepmerge": "^1.2.0",
     "jsonpath": "^0.2.7",
     "reify": "^0.3.8",
-    "toybox-js-parse-variables": "0.0.0",
-    "toybox-js-render-nested-components": "0.0.0",
+    "toybox-js-parse-variables": "0.0.1",
+    "toybox-js-render-nested-components": "0.0.2",
     "toybox-js-xtype": "^2.0.0"
   },
   "devDependencies": {
@@ -29,6 +29,8 @@
     "chai": "^3.5.0",
     "jsdoc-to-markdown": "^2.0.1",
     "mocha": "^3.1.2",
-    "reify": "^0.3.8"
+    "mustache": "^2.3.0",
+    "reify": "^0.3.8",
+    "rfile": "^1.0.0"
   }
 }

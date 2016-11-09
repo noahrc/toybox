@@ -18,7 +18,7 @@
   "dependencies": {
     "jsonpath": "^0.2.7",
     "reify": "^0.3.8",
-    "toybox-js-render-component": "0.0.0",
+    "toybox-js-render-component": "0.0.2",
     "toybox-js-xtype": "^2.0.0"
   },
   "devDependencies": {
@@ -26,6 +26,8 @@
     "chai": "^3.5.0",
     "jsdoc-to-markdown": "^2.0.1",
     "mocha": "^3.1.2",
-    "reify": "^0.3.8"
+    "mustache": "^2.3.0",
+    "reify": "^0.3.8",
+    "rfile": "^1.0.0"
   }
 }

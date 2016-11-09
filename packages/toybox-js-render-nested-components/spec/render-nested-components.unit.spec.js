@@ -2,15 +2,17 @@
 /* prefer-arrow-callback: ["error", { "allowNamedFunctions": true }] */
 
 import { expect } from 'chai';
-import renderNestedComponents from './../build/index.js';
+import renderNestedComponents from './../build.js';
+import Mustache from 'mustache';
+import rfile from 'rfile';
 
 // Import local templates for testing
 // The mustache loader turns the mustache templates into functions
-import layoutTemplate from '!mustache!./layout.mustache';
-import pTemplate from '!mustache!./p.mustache';
-import aTemplate from '!mustache!./a.mustache';
-import thumbnailTemplate from '!mustache!./thumbnail.mustache';
-import imgTemplate from '!mustache!./img.mustache';
+const layoutTemplate = Mustache.parse(rfile('./layout.mustache'));
+const pTemplate = Mustache.parse(rfile('./p.mustache'));
+const aTemplate = Mustache.parse(rfile('./a.mustache'));
+const thumbnailTemplate = Mustache.parse(rfile('./thumbnail.mustache'));
+const imgTemplate = Mustache.parse(rfile('./img.mustache'));
 
 const templates = {
   'p/p': pTemplate,
