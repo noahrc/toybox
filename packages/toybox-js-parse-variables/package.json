@@ -1,6 +1,6 @@
 {
   "name": "toybox-js-parse-variables",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Converts variable markers to functions.",
   "main": "build.js",
   "scripts": {
