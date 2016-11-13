@@ -8,9 +8,9 @@ import renderNestedComponents from 'toybox-js-render-nested-components';
  * Returns a function that, when called, returns the interpolated data.
  *
  * @export
- * @param {Object} sourceData
- * @param {Object} templates
- * @param {Object} defaults
+ * @param {object} - sourceData
+ * @param {object} - A template function or hash of template functions used to render components
+ * @param {Object} - defaults
  * @param {String} [contextPath='$']
  * @returns {Function}
  */
@@ -39,24 +39,24 @@ export default function parseVariables(sourceData, templates, defaults, contextP
  * @param {String} contextPath
  * @returns {Object}
  */
-function parseData(data, sourceData, templates, defaults, contextPath) {
-  const _data = data;
-  switch (xtype.which(_data, 'arr obj str func')) {
-    case 'arr': return _data.map((item, idx) => {
+function parseData(contextData, sourceData, templates, defaults, contextPath) {
+  const _contextData = contextData;
+  switch (xtype.which(_contextData, 'arr obj str func')) {
+    case 'arr': return _contextData.map((item, idx) => {
       const childContext = `${contextPath}[${idx}]`;
       return parseData(item, sourceData, templates, defaults, childContext);
-    });t
+    });
     case 'obj':
-      for (const k in _data) {
-        if (!_data.hasOwnProperty(k)) return undefined;
+      for (const k in _contextData) {
+        if (!_contextData.hasOwnProperty(k)) return undefined;
         const childContext = `${contextPath}.${k}`;
-        _data[k] = parseData(_data[k], sourceData, templates, defaults, childContext);
+        _contextData[k] = parseData(_contextData[k], sourceData, templates, defaults, childContext);
       }
-      return _data;
+      return _contextData;
     case 'str':
-      return parseString(_data, sourceData, templates, defaults, contextPath);
-    case 'funct': return _data();
-    default: return _data;
+      return parseString(_contextData, sourceData, templates, defaults, contextPath);
+    case 'funct': return _contextData();
+    default: return _contextData;
   }
 }
 
@@ -122,7 +122,9 @@ function interpolateVar(varName, sourceData, templates, defaults, contextPath) {
       if (context[varName] !== undefined) {
         if (typeof context[varName] === 'string') return context[varName];
         if (typeof context[varName] === 'function') return context[varName]();
-        return renderNestedComponents(sourceData, templates, defaults, `curPath.${varName}` );
+        const renderedData = renderNestedComponents(sourceData, templates, defaults, `${curPath}.${varName}`);
+        if (Array.isArray(renderedData)) return renderedData.join('');
+        return renderedData;
       }
       const parentPath = paths[0].slice(0, i);
       if (parentPath.length) curPath = jp.stringify(parentPath);

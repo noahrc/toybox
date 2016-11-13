@@ -32,6 +32,16 @@ describe('parse variables', () => {
     done();
   });
 
+  it('should concatenate arrays into strings', (done) => {
+    const testData = {
+      baz: ['biz', 'buzz'],
+      string: '%{baz}',
+    };
+    const result = parseVariables(testData);
+    expect(result.string()).to.equal('bizbuzz');
+    done();
+  });
+
   it('should pass the closest matching key values in an object to a parsed variable', (done) => {
     const testData = {
       testVar: 'foo',

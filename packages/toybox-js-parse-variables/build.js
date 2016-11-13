@@ -8,9 +8,9 @@ import renderNestedComponents from 'toybox-js-render-nested-components';
  * Returns a function that, when called, returns the interpolated data.
  *
  * @export
- * @param {Object} sourceData
- * @param {Object} templates
- * @param {Object} defaults
+ * @param {object} - sourceData
+ * @param {object} - A template function or hash of template functions used to render components
+ * @param {Object} - defaults
  * @param {String} [contextPath='$']
  * @returns {Function}
  */
@@ -47,7 +47,7 @@ function parseData(data, sourceData, templates, defaults, contextPath) {
     case 'arr': return _data.map(function (item, idx) {
       var childContext = contextPath + "[" + idx + "]";
       return parseData(item, sourceData, templates, defaults, childContext);
-    });t
+    });
     case 'obj':
       for (var k in _data) {
         if (!_data.hasOwnProperty(k)) { return undefined; }
@@ -124,7 +124,9 @@ function interpolateVar(varName, sourceData, templates, defaults, contextPath) {
       if (context[varName] !== undefined) {
         if (typeof context[varName] === 'string') { return context[varName]; }
         if (typeof context[varName] === 'function') { return context[varName](); }
-        return renderNestedComponents(sourceData, templates, defaults, ("curPath." + varName) );
+        var renderedData = renderNestedComponents(sourceData, templates, defaults, (curPath + "." + varName));
+        if (Array.isArray(renderedData)) { return renderedData.join(''); }
+        return renderedData;
       }
       var parentPath = paths[0].slice(0, i);
       if (parentPath.length) { curPath = jp.stringify(parentPath); }
