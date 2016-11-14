@@ -9,7 +9,7 @@
     "buble": "buble index.js --no modules > jsnext-build.js",
     "rollup": "rollup -c",
     "prepublish": "npm run rollup && npm run buble",
-    "test": "npm run prepublish && mocha --require reify spec/"
+    "test": "npm run prepublish && mocha --require reify spec"
   },
   "keywords": [
     "toybox",
