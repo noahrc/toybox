@@ -7,7 +7,7 @@
     "commit": "npm test && git cz -- --no-verify",
     "every-package": "node scripts/every-package.js --",
     "test": "mocha --require reify packages/**/spec",
-    "yarn": "npm run every-package -- yarn"
+    "install": "npm run every-package -- npm i"
   },
   "repository": {
     "type": "git",

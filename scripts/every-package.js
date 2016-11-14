@@ -6,16 +6,16 @@ var cp = require('child_process')
 // get library path
 var root = resolve(__dirname, '../packages/')
 
-var command = process.argv[3];
+var commands = process.argv.slice(4);
 
-if(!command) return;
+if(!process.argv[3]) return;
 
 fs.readdirSync(root)
   .forEach(function (pkg) {
     var packagePath = join(root, pkg)
+
     // ensure path has package.json
     if (!fs.existsSync(join(packagePath, 'package.json'))) return
 
-    // install folder
-    cp.spawn(command, { env: process.env, cwd: packagePath, stdio: 'inherit' })
+    cp.spawn(process.argv[3], commands, { env: process.env, cwd: packagePath, stdio: 'inherit' })
   });
