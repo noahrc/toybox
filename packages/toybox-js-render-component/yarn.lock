@@ -912,6 +912,14 @@ test-value@^2.0.0, test-value@^2.1.0:
     array-back "^1.0.3"
     typical "^2.6.0"
 
+toybox-js-parse-variables:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/toybox-js-parse-variables/-/toybox-js-parse-variables-0.2.0.tgz#1ebfe8ff306885d577900a3c94503bf27b1bf0ed"
+  dependencies:
+    jsonpath "^0.2.7"
+    toybox-js-render-nested-components "0.0.2"
+    toybox-js-xtype "^2.0.0"
+
 toybox-js-parse-variables@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/toybox-js-parse-variables/-/toybox-js-parse-variables-0.0.0.tgz#258ab31b374bc3006a83d82416ad8439f8622433"
@@ -928,16 +936,6 @@ toybox-js-parse-variables@0.0.1:
     reify "^0.3.8"
     toybox-js-render-component "0.0.1"
     toybox-js-render-nested-components "0.0.0"
-    toybox-js-xtype "^2.0.0"
-
-toybox-js-parse-variables@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/toybox-js-parse-variables/-/toybox-js-parse-variables-0.1.0.tgz#8d404932c356d0fc53b44ffff5f6d3285ff05ade"
-  dependencies:
-    jsonpath "^0.2.7"
-    reify "^0.3.8"
-    toybox-js-render-component "0.0.1"
-    toybox-js-render-nested-components "0.0.2"
     toybox-js-xtype "^2.0.0"
 
 toybox-js-render-component@0.0.0:
@@ -972,6 +970,14 @@ toybox-js-render-component@0.0.4:
     reify "^0.3.8"
     toybox-js-parse-variables "0.0.1"
     toybox-js-render-nested-components "0.0.4"
+    toybox-js-xtype "^2.0.0"
+
+toybox-js-render-nested-components:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/toybox-js-render-nested-components/-/toybox-js-render-nested-components-0.1.0.tgz#cae9bd0dea6784760f4bd45a134ca3c8e02b2e5a"
+  dependencies:
+    jsonpath "^0.2.7"
+    toybox-js-render-component "0.0.4"
     toybox-js-xtype "^2.0.0"
 
 toybox-js-render-nested-components@0.0.0:

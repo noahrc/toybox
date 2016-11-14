@@ -22,8 +22,8 @@
     "clone": "^2.0.0",
     "deepmerge": "^1.2.0",
     "jsonpath": "^0.2.7",
-    "toybox-js-parse-variables": "0.1.0",
-    "toybox-js-render-nested-components": "0.0.4",
+    "toybox-js-parse-variables": "^0.2.0",
+    "toybox-js-render-nested-components": "^0.1.0",
     "toybox-js-xtype": "^2.0.0"
   },
   "devDependencies": {
