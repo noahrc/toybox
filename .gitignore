@@ -1,3 +1,4 @@
+.released-packages
 node_modules
 build.js
 jsnext-build.js
