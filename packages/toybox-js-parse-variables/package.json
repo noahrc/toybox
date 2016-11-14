@@ -19,7 +19,7 @@
   "license": "X11",
   "dependencies": {
     "jsonpath": "^0.2.7",
-    "toybox-js-render-nested-components": "0.16.3",
+    "toybox-js-render-nested-components": "0.16.5",
     "toybox-js-xtype": "3.0.2"
   },
   "devDependencies": {
