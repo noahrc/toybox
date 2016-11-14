@@ -934,12 +934,11 @@ toybox-js-xtype@^2.0.2:
     xtypejs-extension-custom-types "^0.1.0"
     xtypejs-name-scheme-shortened "^0.1.0"
 
-toybox-js-xtype@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/toybox-js-xtype/-/toybox-js-xtype-3.0.1.tgz#48d61f836caa79ca148be459eb267f5365ea27bb"
+toybox-js-xtype@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/toybox-js-xtype/-/toybox-js-xtype-3.0.2.tgz#7c4aeb6c72b2aa8cf8b4688eaf9a9c54af2a70b7"
   dependencies:
     xtypejs "^0.6.1"
-    xtypejs-extension-custom-types "^0.1.0"
     xtypejs-name-scheme-shortened "^0.1.0"
 
 type-detect@^1.0.0:
