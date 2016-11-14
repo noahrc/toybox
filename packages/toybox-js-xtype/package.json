@@ -18,7 +18,6 @@
   "license": "X11",
   "dependencies": {
     "xtypejs": "^0.6.1",
-    "xtypejs-extension-custom-types": "^0.1.0",
     "xtypejs-name-scheme-shortened": "^0.1.0"
   },
   "devDependencies": {
