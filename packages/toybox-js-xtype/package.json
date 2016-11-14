@@ -1,6 +1,6 @@
 {
   "name": "toybox-js-xtype",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "A custom extension of the xtype library",
   "main": "build.js",
   "jsnext:main": "jsnext-build.js",
