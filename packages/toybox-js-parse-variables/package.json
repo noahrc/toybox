@@ -20,7 +20,7 @@
   "dependencies": {
     "jsonpath": "^0.2.7",
     "toybox-js-render-nested-components": "^0.1.1",
-    "toybox-js-xtype": "^2.0.2"
+    "toybox-js-xtype": "^3.0.0"
   },
   "devDependencies": {
     "buble": "^0.14.0",

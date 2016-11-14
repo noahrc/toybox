@@ -1006,6 +1006,14 @@ toybox-js-render-nested-components@0.0.4:
     toybox-js-render-component "0.0.4"
     toybox-js-xtype "^2.0.0"
 
+toybox-js-xtype:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/toybox-js-xtype/-/toybox-js-xtype-3.0.0.tgz#951e21274071c26888cbdb13e29a1bc12c5043c2"
+  dependencies:
+    xtypejs "^0.6.1"
+    xtypejs-extension-custom-types "^0.1.0"
+    xtypejs-name-scheme-shortened "^0.1.0"
+
 toybox-js-xtype@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/toybox-js-xtype/-/toybox-js-xtype-2.0.0.tgz#be0aff9892d1555b4a9cc9584e46a87b5825c2b9"
