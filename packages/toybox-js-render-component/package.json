@@ -1,6 +1,6 @@
 {
   "name": "toybox-js-render-component",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Renders a toybox block component.",
   "main": "build.js",
   "jsnext:main": "jsnext-build.js",
