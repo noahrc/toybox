@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "commit": "npm test && git cz -- --no-verify",
-    "test": "mocha --require reify packages/**/spec"
+    "every-package": "node scripts/every-package.js --",
+    "test": "mocha --require reify packages/**/spec",
+    "yarn": "npm run every-package -- yarn"
   },
   "repository": {
     "type": "git",
