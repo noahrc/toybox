@@ -23,7 +23,7 @@
     "deepmerge": "^1.2.0",
     "jsonpath": "^0.2.7",
     "toybox-js-parse-variables": "0.2.6",
-    "toybox-js-render-nested-components": "0.16.5",
+    "toybox-js-render-nested-components": "0.16.7",
     "toybox-js-xtype": "3.0.2"
   },
   "devDependencies": {
