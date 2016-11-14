@@ -1,6 +1,6 @@
 {
   "name": "toybox-js-parse-variables",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Converts variable markers to functions.",
   "main": "build.js",
   "jsnext:main": "jsnext-build.js",
