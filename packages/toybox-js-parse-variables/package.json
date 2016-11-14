@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "description": "Converts variable markers to functions.",
   "main": "build.js",
+  "jsnext:main": "jsnext-build.js",
   "scripts": {
     "docs": "jsdoc2md --template README.hbs --files index.js > README.md; echo",
-    "build": "buble index.js --no modules > build.js",
-    "test": "npm run build && mocha --require reify spec"
+    "buble": "buble index.js --no modules > jsnext-build.js",
+    "rollup": "rollup -c",
+    "prepublish": "npm run rollup && npm run buble",
+    "test": "npm run prepublish && mocha --require reify spec"
   },
   "keywords": [
     "toybox",
@@ -16,8 +19,6 @@
   "license": "X11",
   "dependencies": {
     "jsonpath": "^0.2.7",
-    "reify": "^0.3.8",
-    "toybox-js-render-component": "0.0.1",
     "toybox-js-render-nested-components": "0.0.2",
     "toybox-js-xtype": "^2.0.0"
   },
@@ -26,6 +27,8 @@
     "chai": "^3.5.0",
     "jsdoc-to-markdown": "^2.0.1",
     "mocha": "^3.1.2",
-    "reify": "^0.3.8"
+    "reify": "^0.4.0",
+    "rollup": "^0.36.3",
+    "rollup-plugin-buble": "^0.14.0"
   }
 }
