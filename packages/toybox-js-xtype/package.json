@@ -2,7 +2,7 @@
   "name": "toybox-js-xtype",
   "version": "2.0.2",
   "description": "A custom extension of the xtype library",
-  "main": "index.js",
+  "main": "build.js",
   "jsnext:main": "jsnext-build.js",
   "scripts": {
     "buble": "buble index.js --no modules > jsnext-build.js",
