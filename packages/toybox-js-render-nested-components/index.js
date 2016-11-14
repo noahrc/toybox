@@ -1,4 +1,3 @@
-import renderComponent from 'toybox-js-render-component';
 import xtype from 'toybox-js-xtype';
 import jp from 'jsonpath/jsonpath';
 
@@ -59,7 +58,7 @@ export default function renderNestedComponents(data, templates, defaults, contex
       if (xtype.is(defaults, 'obj') && xtype.is(_contextData.__render, 'str')) {
         defaultData = defaults[_contextData.__render];
       }
-
+      const renderComponent = require('toybox-js-render-component');
       return renderComponent(_data, templates, defaultData, contextPath);
 
     default: return _contextData;
